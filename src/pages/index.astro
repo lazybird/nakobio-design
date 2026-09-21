@@ -26,25 +26,6 @@ import Layout from '../layouts/Layout.astro';
         <a href="#spacing" class="btn btn-secondary">Tokens &amp; Formes</a>
         <a href="#code-ai" class="btn btn-ghost">Intégration &amp; llms.txt</a>
       </div>
-
-      <div class="hero-stats no-print">
-        <div class="stat-chip">
-          <span class="stat-num">4</span>
-          <span class="stat-label">Sites &amp; Outils</span>
-        </div>
-        <div class="stat-chip">
-          <span class="stat-num">2</span>
-          <span class="stat-label">Thèmes de marque</span>
-        </div>
-        <div class="stat-chip">
-          <span class="stat-num">7</span>
-          <span class="stat-label">Composants CSS purs</span>
-        </div>
-        <div class="stat-chip">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Zéro dépendance JS</span>
-        </div>
-      </div>
     </div>
   </header>
 
@@ -659,42 +640,6 @@ import Layout from '../layouts/Layout.astro';
     justify-content: center;
     gap: var(--space-3);
     flex-wrap: wrap;
-    margin-bottom: var(--space-10);
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-4);
-    flex-wrap: wrap;
-  }
-
-  .stat-chip {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(var(--blur-sm));
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: var(--space-3) var(--space-5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    min-width: 100px;
-  }
-
-  .stat-num {
-    font-family: var(--font-serif);
-    font-size: var(--text-3xl);
-    font-weight: 700;
-    color: var(--color-brand-primary);
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: var(--text-xs);
-    color: var(--color-ink-soft);
-    text-align: center;
-    line-height: 1.3;
   }
 
   /* ============================================================
@@ -1350,22 +1295,6 @@ import Layout from '../layouts/Layout.astro';
       justify-content: center;
     }
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-2);
-      width: 100%;
-    }
-
-    .stat-chip {
-      padding: var(--space-2) var(--space-3);
-      min-width: unset;
-    }
-
-    .stat-num {
-      font-size: var(--text-2xl);
-    }
-
     .brand-comparison-grid {
       grid-template-columns: 1fr;
     }
@@ -1422,10 +1351,6 @@ import Layout from '../layouts/Layout.astro';
       height: 56px;
       flex-direction: row;
       align-items: center;
-    }
-
-    .hero-stats {
-      grid-template-columns: 1fr;
     }
   }
 </style>
