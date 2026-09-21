@@ -29,6 +29,7 @@ const {
   <link rel="stylesheet" href="/components/cards.css" />
   <link rel="stylesheet" href="/components/tables.css" />
   <link rel="stylesheet" href="/components/forms.css" />
+  <link rel="stylesheet" href="/components/animations.css" />
   <link rel="stylesheet" href="/tokens/print.css" />
 
   <style is:global>
@@ -172,11 +173,14 @@ const {
       background: var(--color-surface-card);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-sm);
-      padding: 6px 8px;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 10px;
       color: var(--color-ink);
       cursor: pointer;
       align-items: center;
       justify-content: center;
+      touch-action: manipulation;
       transition: background 0.15s ease;
     }
 
@@ -223,14 +227,22 @@ const {
       }
 
       .nav-link {
-        display: block;
+        display: flex;
+        align-items: center;
+        min-height: 44px;
         padding: var(--space-2) var(--space-3);
         border-radius: var(--radius-sm);
         width: 100%;
+        font-size: 1rem;
       }
 
       .nav-link:hover {
         background: var(--color-surface-sunken);
+      }
+
+      .theme-toggle-btn {
+        min-height: 36px;
+        padding: 6px 10px;
       }
 
       .nav-brand-badge {
@@ -383,6 +395,25 @@ const {
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
+
+    // Scroll reveal observer
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      revealElements.forEach((el) => observer.observe(el));
+    } else {
+      revealElements.forEach((el) => el.classList.add('revealed'));
+    }
   </script>
 </body>
 </html>

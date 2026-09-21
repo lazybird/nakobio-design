@@ -108,6 +108,8 @@
   --transition-base: 200ms ease;
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-reveal: 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-reveal: cubic-bezier(0.2, 0.8, 0.2, 1);
 
   /* ------------------------------------------------------------------------
      9. Effets de flou (Glassmorphism)
@@ -124,4 +126,15 @@
   --gradient-brand: linear-gradient(135deg, var(--color-brand-primary-dark) 0%, var(--color-brand-primary) 100%);
   --gradient-accent: linear-gradient(135deg, var(--color-brand-secondary) 0%, var(--color-brand-accent) 100%);
   --gradient-surface-card: linear-gradient(145deg, #FFFFFF 0%, #FAFAF4 100%);
+
+  /* ------------------------------------------------------------------------
+     11. Ergonomie Mobile & Cibles Tactiles (Touch Standards)
+     ------------------------------------------------------------------------ */
+  --touch-target-min: 44px;             /* Minimum recommandé WCAG/iOS pour toucher au doigt */
+  --touch-target-comfort: 48px;         /* Standard tactile confortable */
+  --touch-gap-min: 8px;                 /* Espacement minimal entre éléments interactifs */
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-top: env(safe-area-inset-top, 0px);
 }
+
+
