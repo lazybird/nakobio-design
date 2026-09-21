@@ -1,0 +1,578 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nakôbio × Biosain — Vitrine du Design System">
+  <!-- Hero Section -->
+  <header class="hero-section" id="vision">
+    <div class="hero-badge">Identité Unifiée & Système de Design</div>
+    <h1 class="hero-title">
+      L'Élégance de la Terre &<br />la Rigueur Maraîchère.
+    </h1>
+    <p class="hero-desc">
+      Un socle commun pour unifier la vitrine <strong>nako.bio</strong>, <strong>biosain</strong>, la plateforme d'apprentissage <strong>campus</strong> ainsi que l'ensemble des documents techniques, fiches de culture et rapports.
+    </p>
+
+    <div class="hero-actions no-print">
+      <a href="#typography" class="btn btn-primary">Explorer la Typographie</a>
+      <a href="#colors" class="btn btn-secondary">Palette Chromatique</a>
+      <a href="#components" class="btn btn-secondary">Composants</a>
+      <a href="/templates/demo.html" target="_blank" class="btn btn-accent">Tester la Démo Plein Écran ↗</a>
+    </div>
+  </header>
+
+  <!-- Section 1 : Fonderie Typographique -->
+  <section class="ds-section" id="typography">
+    <div class="section-label">01. Typographie</div>
+    <h2 class="section-heading">Newsreader × Inter</h2>
+    <p class="section-sub">Deux polices libres sous licence SIL OFL, combinant authenticité artisanale et clarté fonctionnelle.</p>
+
+    <div class="typo-grid">
+      <div class="typo-card serif-card">
+        <div class="typo-tag">Serif — Éditorial & Titrage</div>
+        <div class="typo-specimen font-serif">Newsreader</div>
+        <p class="typo-preview font-serif">
+          « Nourrir la terre pour que la terre nous nourrisse. »
+        </p>
+        <ul class="typo-rules">
+          <li><strong>Rôles stricts :</strong> Titres h1, h2, h3, citations, repères chiffrés et numéros d'étapes (<code>01</code>, <code>02</code>).</li>
+          <li><strong>Évocation :</strong> Authenticité du papier, sol vivant, chaleur des supports historiques.</li>
+          <li><strong>Tailles recommandées :</strong> 28px (h2) à 48px (hero/impact).</li>
+        </ul>
+      </div>
+
+      <div class="typo-card sans-card">
+        <div class="typo-tag">Sans-serif — Interface & Rigueur</div>
+        <div class="typo-specimen font-sans">Inter</div>
+        <p class="typo-preview font-sans">
+          Tuyau PE Ø 40 mm — Pression de service : 2.5 bars — Débit : 12 L/m linéaire.
+        </p>
+        <ul class="typo-rules">
+          <li><strong>Rôles stricts :</strong> Textes courants, tableaux techniques, navigation, badges, boutons et formulaires.</li>
+          <li><strong>Évocation :</strong> Lisibilité optimale sur smartphone même en plein soleil, clarté technique.</li>
+          <li><strong>Tailles recommandées :</strong> 12px (légendes), 14px (UI), 16px (corps).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 : Couleurs et Marques -->
+  <section class="ds-section" id="colors">
+    <div class="section-label">02. Chromatique</div>
+    <h2 class="section-heading">Socle Matières & Déclinaisons de Marque</h2>
+    <p class="section-sub">
+      Les surfaces naturelles et encres végétales sont partagées. Les teintes de marque changent selon le contexte avec <code>data-theme</code>.
+    </p>
+
+    <!-- Socle partagé -->
+    <h3 class="subsection-title">1. Socle Commun — Matières & Sol</h3>
+    <div class="color-swatches-grid">
+      <div class="swatch-card">
+        <div class="swatch-color" style="background-color: #FFFDF6; border: 1px solid var(--color-border);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Surface Naturelle</span>
+          <span class="swatch-hex">#FFFDF6</span>
+          <span class="swatch-role">Fond principal (chaud/lin)</span>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-color" style="background-color: #F4EED8;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Surface Sunken</span>
+          <span class="swatch-hex">#F4EED8</span>
+          <span class="swatch-role">Zones techniques & callouts</span>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-color" style="background-color: #1B2318;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Noir Végétal</span>
+          <span class="swatch-hex">#1B2318</span>
+          <span class="swatch-role">Encre de lecture principale</span>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-color" style="background-color: #43492F;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Vert Olive Sombre</span>
+          <span class="swatch-hex">#43492F</span>
+          <span class="swatch-role">Textes secondaires & chapeaux</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Déclinaisons de marques -->
+    <h3 class="subsection-title" style="margin-top: var(--space-8);">2. Déclinaisons Spécifiques</h3>
+    <div class="brand-comparison-grid">
+      <!-- Nakobio -->
+      <div class="brand-box">
+        <div class="brand-header">
+          <h4 class="font-serif">Nakôbio (Mali / Sahel)</h4>
+          <span class="badge-tag">data-theme="nakobio"</span>
+        </div>
+        <p class="brand-desc">Agroécologie, pédagogie, semences paysannes et transmission vivante.</p>
+        <div class="brand-swatches">
+          <div class="mini-swatch" style="background-color: #2F4A34;" title="Vert Forêt Vivant (#2F4A34)"><span>Primary</span></div>
+          <div class="mini-swatch" style="background-color: #C86832;" title="Latérite / Terre cuite (#C86832)"><span>Secondary</span></div>
+          <div class="mini-swatch" style="background-color: #E0A030;" title="Paille / Soleil (#E0A030)"><span>Accent</span></div>
+        </div>
+      </div>
+
+      <!-- Biosain -->
+      <div class="brand-box">
+        <div class="brand-header">
+          <h4 class="font-serif">Biosain (Autriche / Europe)</h4>
+          <span class="badge-tag">data-theme="biosain"</span>
+        </div>
+        <p class="brand-desc">Maraîchage bio-intensif de précision, vente directe et production de semences.</p>
+        <div class="brand-swatches">
+          <div class="mini-swatch" style="background-color: #CAAE00;" title="Ocre Jaune Historique (#CAAE00)"><span>Primary</span></div>
+          <div class="mini-swatch" style="background-color: #2F4A34;" title="Vert Forêt Profond (#2F4A34)"><span>Secondary</span></div>
+          <div class="mini-swatch" style="background-color: #1E3324;" title="Accent Sombre (#1E3324)"><span>Accent</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 : Composants d'Interface Pédagogique -->
+  <section class="ds-section" id="components">
+    <div class="section-label">03. Composants</div>
+    <h2 class="section-heading">Composants Modulaires en Action</h2>
+    <p class="section-sub">Les composants s'adaptent automatiquement au thème actif (essayez de basculer entre Nakôbio et Biosain en haut à droite).</p>
+
+    <!-- Cartouche d'étape -->
+    <h3 class="subsection-title">Cartouche d'Étape Pédagogique</h3>
+    <div class="steps-list">
+      <article class="step-card">
+        <div class="step-header">
+          <div class="step-meta-group">
+            <span class="step-number">01</span>
+            <h4 class="step-title">Repérage des lignes et tension des cordeaux</h4>
+          </div>
+          <span class="step-badge">15 minutes</span>
+        </div>
+        <div class="step-body">
+          <p>Aligner les jalons aux deux extrémités de la parcelle. Une planche standard fait exactement <strong>75 cm</strong> de largeur utile avec un passe-pied de <strong>40 cm</strong>.</p>
+        </div>
+      </article>
+
+      <article class="step-card">
+        <div class="step-header">
+          <div class="step-meta-group">
+            <span class="step-number">02</span>
+            <h4 class="step-title">Incorporation de compost de surface</h4>
+          </div>
+          <span class="step-badge">30 minutes</span>
+        </div>
+        <div class="step-body">
+          <p>Étaler uniformément 4 brouettes de compost mûr par planche de 30 mètres sans enfouir profondément afin de nourrir les vers et la microfaune de surface.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Encadrés Callouts -->
+    <h3 class="subsection-title" style="margin-top: var(--space-8);">Encadrés de Conseils & Alertes</h3>
+    <div class="callout callout-tip">
+      <div class="callout-title">Bonne pratique agronomique</div>
+      Toujours couvrir immédiatement après l'amendement (paillage de paille de mil ou bâche occultante) pour préserver l'humidité et les micro-organismes du sol.
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-title">Point de vigilance</div>
+      Ne pas tasser le lit de semence lors de la pose des asperseurs. Marchez exclusivement dans les passe-pieds de 40 cm.
+    </div>
+
+    <!-- Tableaux Techniques -->
+    <h3 class="subsection-title" style="margin-top: var(--space-8);">Tableaux Techniques & Dosages</h3>
+    <div class="table-container">
+      <table class="table-tech">
+        <thead>
+          <tr>
+            <th>Composant / Étape</th>
+            <th>Type de matériel</th>
+            <th>Dosage / Cote</th>
+            <th>Notes de terrain</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Planche standard</td>
+            <td>Sol meuble permanent</td>
+            <td class="num-val">75 cm</td>
+            <td>Compatible rouleau rayonneur & filets</td>
+          </tr>
+          <tr>
+            <td>Tuyauterie principale</td>
+            <td>Polyéthylène haute densité</td>
+            <td class="num-val">Ø 40 mm</td>
+            <td>Pression d'entrée recommandée : 2.8 bars</td>
+          </tr>
+          <tr>
+            <td>Fertilisation de fond</td>
+            <td>Compost thermophile mûr</td>
+            <td class="num-val">200 L / 30 m</td>
+            <td>À incorporer superficiellement au croc</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Section 4 : Directives Développeurs et IA -->
+  <section class="ds-section" id="code-ai">
+    <div class="section-label">04. Développeurs & Assistants IA</div>
+    <h2 class="section-heading">Règles d'Implémentation & Intégration</h2>
+    <p class="section-sub">Ce design system est prêt pour la production et conçu pour être facilement consommé par les développeurs et les assistants de génération de code.</p>
+
+    <div class="code-box">
+      <div class="code-header">
+        <span>Installation rapide (CSS unifié)</span>
+      </div>
+      <pre><code>&lt;!-- Importer les tokens et composants dans vos pages HTML ou layouts Astro --&gt;
+&lt;link rel="stylesheet" href="https://design.nako.bio/tokens/tokens.css" /&gt;
+&lt;link rel="stylesheet" href="https://design.nako.bio/tokens/themes.css" /&gt;
+&lt;link rel="stylesheet" href="https://design.nako.bio/components/steps.css" /&gt;
+&lt;link rel="stylesheet" href="https://design.nako.bio/components/callouts.css" /&gt;
+&lt;link rel="stylesheet" href="https://design.nako.bio/tokens/print.css" /&gt;</code></pre>
+    </div>
+
+    <div class="rules-summary-card">
+      <h3 class="font-serif" style="margin-top: 0;">Principes de non-régression à respecter :</h3>
+      <ol>
+        <li><strong>Zéro police non autorisée :</strong> Ni Quicksand, ni Roboto, ni Montserrat. Strictement Newsreader (titres, chiffres, citations) et Inter (interface et corps).</li>
+        <li><strong>Zéro couleur hexadécimale en dur dans les composants :</strong> Toujours utiliser <code>var(--color-brand-primary)</code>, <code>var(--color-surface)</code>, etc.</li>
+        <li><strong>Bascule de marque :</strong> L'attribut <code>data-theme="nakobio"</code> ou <code>data-theme="biosain"</code> à la racine suffit pour adapter l'ensemble de l'interface.</li>
+        <li><strong>Impression A4 automatique :</strong> Grâce à <code>print.css</code>, toute fiche technique ou page de cours s'imprime en PDF sans coupure maladroite de tableaux ou d'étapes.</li>
+      </ol>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero */
+  .hero-section {
+    padding: var(--space-12) 0 var(--space-16);
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: var(--space-1) var(--space-4);
+    background: var(--color-surface-sunken);
+    color: var(--color-brand-primary);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-4);
+    border: 1px solid var(--color-border);
+  }
+
+  .hero-title {
+    font-family: var(--font-serif);
+    font-size: var(--text-4xl);
+    line-height: var(--leading-tight);
+    color: var(--color-ink);
+    margin: 0 auto var(--space-5);
+    max-width: 800px;
+  }
+
+  .hero-desc {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-ink-soft);
+    max-width: 720px;
+    margin: 0 auto var(--space-8);
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  /* Boutons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-decoration: none;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: var(--color-brand-primary);
+    color: var(--color-surface);
+  }
+  .btn-primary:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: var(--color-surface-card);
+    color: var(--color-ink);
+    border: 1px solid var(--color-border-strong);
+  }
+  .btn-secondary:hover {
+    background: var(--color-surface-sunken);
+    border-color: var(--color-brand-primary);
+  }
+
+  .btn-accent {
+    background: var(--color-brand-secondary);
+    color: #FFFFFF;
+  }
+  .btn-accent:hover {
+    opacity: 0.92;
+  }
+
+  /* Sections */
+  .ds-section {
+    padding: var(--space-16) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .section-label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-brand-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .section-heading {
+    font-family: var(--font-serif);
+    font-size: var(--text-3xl);
+    line-height: var(--leading-tight);
+    color: var(--color-ink);
+    margin: 0 0 var(--space-2) 0;
+  }
+
+  .section-sub {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    margin: 0 0 var(--space-8) 0;
+    max-width: 680px;
+  }
+
+  .subsection-title {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    color: var(--color-ink);
+    margin-bottom: var(--space-4);
+  }
+
+  /* Grille Typographie */
+  .typo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .typo-card {
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .typo-tag {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-brand-primary);
+    margin-bottom: var(--space-3);
+  }
+
+  .typo-specimen {
+    font-size: 2.5rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-ink);
+    line-height: 1.1;
+    margin-bottom: var(--space-4);
+  }
+
+  .typo-preview {
+    font-size: var(--text-lg);
+    line-height: 1.4;
+    color: var(--color-ink-soft);
+    padding: var(--space-4);
+    background: var(--color-surface-sunken);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-6);
+  }
+
+  .typo-rules {
+    padding-left: var(--space-5);
+    font-size: var(--text-sm);
+    color: var(--color-ink);
+    margin: 0;
+  }
+  .typo-rules li {
+    margin-bottom: var(--space-2);
+  }
+
+  /* Swatches couleurs */
+  .color-swatches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .swatch-card {
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .swatch-color {
+    height: 90px;
+    width: 100%;
+  }
+
+  .swatch-info {
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .swatch-name {
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-sm);
+    color: var(--color-ink);
+  }
+
+  .swatch-hex {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .swatch-role {
+    font-size: var(--text-xs);
+    color: var(--color-ink-soft);
+    margin-top: 4px;
+  }
+
+  /* Comparaison marques */
+  .brand-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .brand-box {
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+  }
+
+  .brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-2);
+  }
+
+  .brand-header h4 {
+    margin: 0;
+    font-size: var(--text-xl);
+    color: var(--color-ink);
+  }
+
+  .badge-tag {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    background: var(--color-surface-sunken);
+    padding: 2px 6px;
+    border-radius: var(--radius-xs);
+    color: var(--color-ink-soft);
+  }
+
+  .brand-desc {
+    font-size: var(--text-sm);
+    color: var(--color-ink-soft);
+    margin: 0 0 var(--space-4) 0;
+  }
+
+  .brand-swatches {
+    display: flex;
+    gap: var(--space-2);
+  }
+
+  .mini-swatch {
+    flex: 1;
+    height: 56px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: flex-end;
+    padding: 6px;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+
+  /* Code box */
+  .code-box {
+    background: #1B2318;
+    color: #FFFDF6;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--space-8);
+  }
+
+  .code-header {
+    background: rgba(255, 253, 246, 0.08);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+    color: #E0A030;
+    border-bottom: 1px solid rgba(255, 253, 246, 0.08);
+  }
+
+  .code-box pre {
+    margin: 0;
+    padding: var(--space-4);
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    line-height: 1.6;
+  }
+
+  .rules-summary-card {
+    background: var(--color-surface-sunken);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+  }
+
+  .rules-summary-card ol {
+    margin: 0;
+    padding-left: var(--space-5);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    color: var(--color-ink);
+  }
+</style>

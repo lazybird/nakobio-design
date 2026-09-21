@@ -1,0 +1,19 @@
+{
+  "name": "nakobio-biosain-design",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Design System unifié Nakôbio × Biosain (Vitrine, Campus, Print)",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 3000",
+    "start": "sirv dist --port 3000 --host 0.0.0.0 --cors",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.16.18"
+  },
+  "devDependencies": {
+    "sirv-cli": "^3.0.0"
+  }
+}

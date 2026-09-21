@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="nakobio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Démo Design System — Nakôbio × Biosain</title>
+  
+  <!-- Inclusions des tokens et composants -->
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="../tokens/themes.css">
+  <link rel="stylesheet" href="../components/cards.css">
+  <link rel="stylesheet" href="../components/steps.css">
+  <link rel="stylesheet" href="../components/callouts.css">
+  <link rel="stylesheet" href="../components/tables.css">
+  <link rel="stylesheet" href="../tokens/print.css">
+
+  <style>
+    body {
+      background-color: var(--color-surface);
+      color: var(--color-ink);
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: var(--space-8) var(--space-4);
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 820px;
+      width: 100%;
+    }
+
+    .theme-switcher {
+      display: flex;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+      background: var(--color-surface-sunken);
+      padding: var(--space-2);
+      border-radius: var(--radius-full);
+      width: fit-content;
+    }
+
+    .theme-btn {
+      border: none;
+      background: transparent;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-full);
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      cursor: pointer;
+      color: var(--color-ink);
+      transition: all 0.2s ease;
+    }
+
+    .theme-btn.active {
+      background: var(--color-surface-card);
+      box-shadow: var(--shadow-sm);
+      color: var(--color-brand-primary);
+      font-weight: var(--weight-bold);
+    }
+
+    header.module-header {
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: var(--space-6);
+    }
+
+    .category-badge {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      letter-spacing: 0.08em;
+      color: var(--color-brand-primary);
+      margin-bottom: var(--space-2);
+    }
+
+    h1.module-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-3xl);
+      line-height: var(--leading-tight);
+      margin: 0 0 var(--space-3) 0;
+      color: var(--color-ink);
+    }
+
+    p.module-lead {
+      font-size: var(--text-lg);
+      line-height: var(--leading-relaxed);
+      color: var(--color-ink-soft);
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <!-- Sélecteur interactif de thème -->
+    <div class="theme-switcher no-print">
+      <button class="theme-btn active" onclick="setTheme('nakobio')">Thème Nakôbio</button>
+      <button class="theme-btn" onclick="setTheme('biosain')">Thème Biosain</button>
+    </div>
+
+    <!-- En-tête pédagogique -->
+    <header class="module-header">
+      <span class="category-badge">Module 03 — Sol Vivant & Préparation</span>
+      <h1 class="module-title">Standardisation des planches permanentes (75 cm)</h1>
+      <p class="module-lead">
+        Mise en place de planches permanentes standardisées pour optimiser le travail à la main,
+        le passage des outils adaptés et maximiser la fertilité biologique du sol.
+      </p>
+    </header>
+
+    <!-- Tableau de matériel et dosages -->
+    <section>
+      <h2 style="font-family: var(--font-serif); font-size: var(--text-2xl); margin-bottom: var(--space-3);">
+        Matériel requis & Dosages
+      </h2>
+      <div class="table-container">
+        <table class="table-tech">
+          <thead>
+            <tr>
+              <th>Élément</th>
+              <th>Spécification</th>
+              <th>Quantité / Planche (30m)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Largeur planche</td>
+              <td>Surface de culture utile</td>
+              <td class="num-val">75 cm</td>
+            </tr>
+            <tr>
+              <td>Passe-pied</td>
+              <td>Allée de circulation</td>
+              <td class="num-val">40 cm</td>
+            </tr>
+            <tr>
+              <td>Compost mûr</td>
+              <td>Amendement de surface</td>
+              <td class="num-val">4 brouettes (≈ 200 L)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Étapes séquentielles -->
+    <section>
+      <h2 style="font-family: var(--font-serif); font-size: var(--text-2xl); margin-top: var(--space-8); margin-bottom: var(--space-4);">
+        Protocole de réalisation
+      </h2>
+
+      <div class="steps-list">
+        <article class="step-card">
+          <div class="step-header">
+            <div class="step-meta-group">
+              <span class="step-number">01</span>
+              <h3 class="step-title">Piquetage et alignement au cordeau</h3>
+            </div>
+            <span class="step-badge">15 min</span>
+          </div>
+          <div class="step-body">
+            <p>Tendre deux cordeaux parallèles espacés de 75 cm. Vérifier l'orthogonalité par rapport à l'allée principale pour garantir la compatibilité des bâches et filets.</p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-header">
+            <div class="step-meta-group">
+              <span class="step-number">02</span>
+              <h3 class="step-title">Aération sans retournement (Grelinette / Campagnole)</h3>
+            </div>
+            <span class="step-badge">25 min</span>
+          </div>
+          <div class="step-body">
+            <p>Enfoncer les dents verticalement tous les 15 cm. Effectuer un mouvement de bascule doux pour fissurer la terre sans mélanger les horizons biologiques.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Encadré Vigilance -->
+      <div class="callout callout-warning">
+        <div class="callout-title">Point de vigilance — Humidité du sol</div>
+        Ne jamais travailler un sol trop gorgé d'eau ou excessivement sec. La terre doit s'émietter facilement sous la pression des doigts sans former de mottes compactes.
+      </div>
+
+      <!-- Encadré Bonne pratique -->
+      <div class="callout callout-tip">
+        <div class="callout-title">Bonne pratique paysanne</div>
+        Dans le contexte sahélien (Nakôbio), paillez immédiatement après l'amendement pour protéger la microbiologie du rayonnement solaire direct.
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(theme));
+      });
+    }
+  </script>
+</body>
+</html>
